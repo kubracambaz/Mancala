@@ -1,7 +1,8 @@
 # Mancala Game for bol.com
 
-This application implements backend and frontend Mancala Game.It is a strategy game played by default with 2 players, 6 pits and 6 stones. The user can play the game with as many stones and pits as he/she wants.
-It is a Springboot application. In the design of the application architecture, the application design was made by taking 12 factors as reference. 
+This application implements backend and frontend Mancala Game.It is a strategy game played by default with 2 players, pits and  stones. The user can play the game with as many stones and pits as he/she wants.Default values of pits and stones are 6.
+It is a Springboot application.The business rules of the game in the application can be dynamically extended or improved via the rule engine. In the design of the application architecture, the application design was made by taking 12 factors as reference. 
+
   
 ## Technical Stack
    
@@ -16,9 +17,9 @@ It is a Springboot application. In the design of the application architecture, t
 	* ModelMapper for object mapping
     * Swagger 2 API documentation
     * Junit for TDD
-	* Single Responsibilities
 	* Rest Service Standarts
 	* Singleton Pattern
+	* SOLID principles
 
 ## Tasks
     - Setup project properly from spring initialzr.
