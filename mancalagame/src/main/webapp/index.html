@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Mancala Game</title>
+
+    <link href="./css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="./css/main.css" rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+<br/><br/>
+<left>
+    <button id="newGame" onclick="newGame();" class="btn-newgame">New Game</button>
+</left>
+<br/><br/>
+
+<input class="pot" id="Pl" value="Player : "></input>
+<input class="pot" id="Player" value="FIRST"></input>
+<br/><br/>
+
+<input class="pot" id="Gamestatus" value="Game Status : "></input>
+<input class="pot" id="Gs" value="STARTED"></input>
+
+
+<br/><br/>
+<input class="pot" id="winnerPlayerL" value="WinnerPlayer :"></input>
+<input class="pot" id="winnerPlayer" value=""></input>
+
+<br/><br/>
+
+<div class="board">
+    <div class="section endsection">
+        <button class="pot" id="mb" value="mb">kh1</button>
+    </div>
+    <div class="section midsection">
+        <div class="midrow topmid">
+            <button class="pot" id="5" value="k6" onclick="playGame(this.id);">k6</button>
+            <button class="pot" id="4" value="k5" onclick="playGame(this.id);">k5</button>
+            <button class="pot" id="3" value="k4" onclick="playGame(this.id);">k4</button>
+            <button class="pot" id="2" value="k3" onclick="playGame(this.id);">k3</button>
+            <button class="pot" id="1" value="k2" onclick="playGame(this.id);">k2</button>
+            <button class="pot" id="0" value="k1" onclick="playGame(this.id);">k1</button>
+        </div>
+        <div class="midrow botmid">
+            <button class="pot" id="7" value="g7" onclick="playGame(this.id);">g1</button>
+            <button class="pot" id="8" value="g8" onclick="playGame(this.id);">g2</button>
+            <button class="pot" id="9" value="g9" onclick="playGame(this.id);">g3</button>
+            <button class="pot" id="10" value="g10" onclick="playGame(this.id);">g4</button>
+            <button class="pot" id="11" value="g11" onclick="playGame(this.id);">g5</button>
+            <button class="pot" id="12" value="g12" onclick="playGame(this.id);">g6</button>
+        </div>
+    </div>
+    <div class="section endsection">
+        <button class="pot" id="mt" value="mt">gh1</button>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+<script src="main.js" th:href="@{/main.js}"></script>
+<script src="play.js" th:href="@{/play.js}"></script>
+</body>
+</html>
